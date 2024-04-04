@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Skydash Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/feather/feather.css" />
+    <link
+      rel="stylesheet"
+      href="../../vendors/ti-icons/css/themify-icons.css"
+    />
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css" />
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/select2/select2.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css"
+    />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/favicon.png" />
+  </head>
+
+  <body>
+    <div class="container-scroller">
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div
+          class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
+        >
+          <a class="navbar-brand brand-logo mr-5" href="../../index.html"
+            ><img src="../../images/logo.svg" class="mr-2" alt="logo"
+          /></a>
+          <a class="navbar-brand brand-logo-mini" href="../../index.html"
+            ><img src="../../images/logo-mini.svg" alt="logo"
+          /></a>
+        </div>
+        <div
+          class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+        >
+          <button
+            class="navbar-toggler navbar-toggler align-self-center"
+            type="button"
+            data-toggle="minimize"
+          >
+            <span class="icon-menu"></span>
+          </button>
+
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <div id="right-sidebar" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+        </div>
+        <!-- partial -->
+        <!-- partial:../../partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/forms/basic_elements.html">
+                <i class="icon-columns menu-icon"></i>
+                <span class="menu-title">Create Brand</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card bg-trans">
+                  <h4 class="card-title" id="title-brand">
+                    <i class="ti-reload text-success"></i>
+                    Loading data, please wait
+                  </h4>
+
+                  <form class="forms-sample" id="myFormEdit">
+                    <div class="card-body">
+                      <h3 class="card-description">Category</h3>
+                      <div class="form-group">
+                        <label for="brand-name">Brand Name </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="brand-name"
+                          placeholder="Ex: RAND IDENTITIES/ MOTION"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Ex: DEAR MAMA & PAPA"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="year">Year</label>
+                        <select class="form-control" id="year">
+                          <option>2020</option>
+                          <option>2021</option>
+                          <option>2022</option>
+                          <option>2023</option>
+                          <option>2024</option>
+                          <option>2025</option>
+                          <option>2026</option>
+                          <option>2027</option>
+                          <option>2028</option>
+                          <option>2029</option>
+                          <option>2030</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="type">Type</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="type"
+                          placeholder="Ex: PROJECT"
+                        />
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="col-form-label">Position Row</label>
+                            <div class="">
+                              <select class="form-control" id="position-row">
+                                <option class="disabled">
+                                  -- Line selection --
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="col-form-label">Number Columns</label>
+                            <div class="">
+                              <select class="form-control" id="number-columns">
+                                <option class="disabled">
+                                  -- Number columns --
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="col-form-label">Location</label>
+                            <div class="">
+                              <select class="form-control" id="position">
+                                <option class="disabled">
+                                  -- Location selection --
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-description">Content</h3>
+
+                      <div class="form-group">
+                        <label for="studio">Studio</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="studio"
+                          placeholder="Ex: ZURU EDGE"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="role">Role</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="role"
+                          placeholder="Ex: Junior Graphic Designer"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label
+                          for="
+                        responsibilities"
+                        >
+                          Responsibilities</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="responsibilities"
+                          placeholder="Ex: Content Design, Motion Design, Storyboarding"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="describe"> Description</label>
+                        <textarea
+                          class="form-control"
+                          id="describe"
+                          rows="4"
+                          placeholder="In my role as a junior graphic designer at Dose & Co..."
+                        ></textarea>
+                      </div>
+
+                      <div class="form-group">
+                        <label
+                          >Upload Image Brand
+                          <span class="italic-text"
+                            >( Image size is less than 10Mb )</span
+                          ></label
+                        >
+                        <input
+                          type="file"
+                          id="file-upload"
+                          class="file-upload-default"
+                        />
+                        <div class="input-group col-xs-12">
+                          <input
+                            type="text"
+                            id="file-name"
+                            class="form-control file-upload-info"
+                            disabled
+                            placeholder="Upload Image"
+                          />
+                          <span class="input-group-append">
+                            <button
+                              type="button"
+                              class="btn btn-success btn-icon-text file-upload-browse2"
+                            >
+                              <i class="ti-upload btn-icon-prepend"></i>
+                              Upload
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="table-responsive">
+                        <table class="table" id="image-table">
+                          <thead>
+                            <tr>
+                              <th>Image</th>
+                              <th class="col-lg-8 display-none">
+                                Name Picture
+                              </th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+
+                      <div
+                        id="saveEditButton"
+                        type="submit"
+                        class="btn btn-primary mt-4"
+                      >
+                        Save Edit
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer">
+            <div
+              class="d-sm-flex justify-content-center justify-content-sm-between"
+            >
+              <span
+                class="text-muted text-center text-sm-left d-block d-sm-inline-block"
+                >Copyright © 2021. Premium
+                <a href="https://www.bootstrapdash.com/" target="_blank"
+                  >Bootstrap admin template</a
+                >
+                from BootstrapDash. All rights reserved.</span
+              >
+              <span
+                class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"
+                >Hand-crafted & made with
+                <i class="ti-heart text-danger ml-1"></i
+              ></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <script src="../../vendors/select2/select2.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/hoverable-collapse.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/settings.js"></script>
+    <script src="../../js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../../js/file-upload.js"></script>
+    <script src="../../js/typeahead.js"></script>
+    <script src="../../js/select2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/script3.js"></script>
+  </body>
+</html>
